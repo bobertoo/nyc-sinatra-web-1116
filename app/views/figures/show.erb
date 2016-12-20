@@ -6,10 +6,8 @@
   </head>
   <body>
     <h1>Figure: <%= @figure.name %></h1>
-    <form method="POST" action="/figures/<%= @figure.id %>/delete">
-      <input id='hidden' type='hidden' name='method' value='delete'>
-      <input type='submit' value='delete'>
-    </form>
+    <% @figure.landmarks.each do |landmark| %>
+      <%= landmark.name %>
+    <% end %>
   </body>
 </html>
- 

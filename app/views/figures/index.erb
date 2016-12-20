@@ -2,12 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Give me my figures!</title>
+    <title>All of the figures. FIGURE IT OUT</title>
   </head>
   <body>
-    <h1>ALL THE FIGURES WHOA!</h1>
-    <%= @figures.all.each do |figure| %>
-    <h2><%= figure.name %></h2>
+    <ul>
+    <% @figures.each do |figure| %>
+      <li><%= figure.name %></li>
     <% end %>
+    </ul>
   </body>
 </html>
